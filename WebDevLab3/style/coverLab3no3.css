@@ -1,0 +1,28 @@
+table {
+    border: 1px solid;
+}
+
+td {
+    border: 1px solid; 
+    text-align: left; 
+    vertical-align: middle;
+}
+
+.pim , .num {
+    text-align: left;
+}
+
+.Login-button {
+    cursor: pointer;
+    background: none;
+}
+
+img {
+    width: 50px;
+    height: auto;
+    display: block;
+}
+
+.logout-button {
+    cursor: pointer;
+}

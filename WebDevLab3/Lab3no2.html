@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title แบบฟอร์มจองทัวร์></title>
+    <style type="text/css">
+	  input:invalid {
+	    border: red solid 4px;
+	  }
+
+      fieldset {
+        border: solid 2px;
+      }
+	</style>
+</head>
+<body>
+    <form action="form-echo.php" method="get">
+        <fieldset>
+            <legend>แบบฟอร์มจองทัวร์</legend>
+            <p>ข้อมูลทั่วไป<br>
+                ชื่อ-สกุล:<br>
+                <input 
+                    type="text" 
+                    name="name"
+                    placeholder="กรอกชื่อ-สกุล"
+                    pattern="[\u0E00-\u0E7F]+-[\u0E00-\u0E7F]+"
+                ><br>
+
+                Email:<br>
+                <input 
+                    type="text" 
+                    name="Email"
+                    pattern="[A-Za-z0-9]+@gmail.com"
+                ><br>
+
+                โทรศัพท์:<br>
+                <input 
+                    type="text" 
+                    value="+66"
+                    name="tell"
+                    pattern="\+66\d{9}"
+                ><br>
+
+                ที่อยู่:<br>
+                <textarea
+                    name="home"
+                    row="5"
+                    cols="30"
+                    pattern=""
+                ></textarea><br>
+
+                รหัสไปรษณีย์: 
+                <input 
+                    type="text" 
+                    name="Postcode"
+                    pattern="\d{5}"
+                    size="5"
+                ><br>
+
+                รูปผู้จอง:
+                <input 
+                    type="file" 
+                    name="Image"    
+                    accept="image/*"
+                >
+            </p>
+        </fieldset><br>
+        <fieldset>
+            <legend>ข้อมูลเข้าสู่ระบบ</legend>
+                Username:<br>
+                <input
+                    type="text"
+                    name="Username"
+                    pattern="[\dA-Za-z_]{8,}"
+                ><br>
+                <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ _ ตั้งแต่ 8 ตัวขึ้นไป</i></br></br>
+
+                Password:<br>
+                <input
+                    type="text"
+                    name="Password"
+                    pattern="{8,}"
+                ><br>
+                <i>ประกอบด้วยตัวอักขระอะไรก้ได้ 8 ตัวขึ้นไป</i>
+            </p>
+        </fieldset><br>
+        
+        <fieldset>
+            <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+            แพคเกจทัวร์ที่ต้องการ:
+            <select name="tourPackage">
+                <option value="">--select--</option>
+                <option value="C">Thailand</option>
+                <option value="C2">Japan</option>
+                <option value="C3">India</option>
+                <option value="C4">Laos</option>
+                <option value="C5">Canada</option>
+            </select><br>
+
+            วันที่เดินทาง: 
+            <input 
+                type="date" 
+                name="travelDate"
+            ><br>
+
+            จำนวนผู้เดินทาง:
+            <input
+                type="text" 
+                name="Datetogo"
+                size="5"
+                pattern="(\d|10)"
+            ><br>
+
+            เน้นการท่องเที่ยวแบบใด? <br>
+            <input type="checkbox" name="interest" value="shopping">ชอปปิ้ง<br>
+            <input type="checkbox" name="interest" value="Natural">ธรรมชาติ<br>
+            <input type="checkbox" name="interest" value="sea">ทะเล<br><br>
+
+            ยอมรับเงื่อนไขและข้อตกลง 
+            <input type="radio" name="agree" value="agree" checked="checked">I agree
+            <input type="radio" name="agree" value="disagree">I disagree
+
+            <button type="button">จอง</button>
+
+            </p>
+        </fieldset>
+    </form>
+
+</body>
+</html>

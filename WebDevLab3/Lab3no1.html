@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+	<style type="text/css">
+	  input:invalid {
+	    border: red solid 4px;
+	  }
+	</style>
+
+</head>
+<body>
+    <h1>ข้อ 1.1 จงสร้าง Form โดยเลือกใช้ Input Type ที่เหมาะสม</h1>
+
+	<h4>1. ชื่อเต็ม/ย่อของสาขาวิชา</h4>
+	<input 
+			type="text" 
+	        name="major"
+			placeholder="ex.Computer Sceince/Cs"
+			pattern="[A-Za-z]+/[A-Za-z]+"
+	>
+	<h4>2. จำนวนเงินที่จะโอน</h4>
+	<input 
+			type="number" 
+	        name="amout"
+			placeholder=""
+			step="0.01"
+			pattern="\d{1,}"
+	> บาท
+
+	<h4>3. อาหารที่ชื่นชอบ 5 ชนิดที่ชื่นชอบจากมากไปน้อย</h4>
+	<label>อันดับ 1:
+		<input type="text" id="food1" name="favorite_food_1"><br>
+	</label>
+
+	<label>อันดับ 2:
+		<input type="text" id="food2" name="favorite_food_2"><br>
+	</label>
+
+	<label>อันดับ 3:
+		<input type="text" id="food3" name="favorite_food_3"><br>
+	</label>
+
+	<label>อันดับ 4:
+		<input type="text" id="food4" name="favorite_food_4"><br>
+	</label>
+
+	<label>อันดับ 5:
+		<input type="text" id="food5" name="favorite_food_5"><br>
+	</label>
+
+	<h4>4. ค่าไฟฟ้า 3 เดือนที่ผ่านมา</h4>
+	<label>เดือนที่ 1:
+		<input type="number" id="M1" name="M1">
+	</label> บาท<br>
+
+	<label>เดือนที่ 2:
+		<input type="number" id="M2" name="M2">
+	</label> บาท<br>
+
+
+	<label>เดือนที่ 3:
+		<input type="number" id="M3" name="m3">
+	</label> บาท<br>
+
+	<h4>5. รหัสบัตรประชาชน</h4>
+	<input 
+			type="text" 
+	        name="person"
+			placeholder="ตัวเลข 13 หลัก"
+			pattern="\d{13}"
+	>
+
+	<h4>6. ความพึงพอใจของหนังสือเล่มนี้</h4>
+	<input type="radio" name="Like" value="Like1">มากที่สุด
+	<input type="radio" name="Like" value="Like2">มาก
+	<input type="radio" name="Like" value="Like3">ปานกลาง
+	<input type="radio" name="Like" value="Like4">น้อย
+	<input type="radio" name="Like" value="Like5">น้อยที่สุด
+
+	<h4>7. อาการป่วย</h4>
+	<textarea 
+			id="symptoms" 
+			name="symptoms" 
+			rows="5" cols="50" 
+			placeholder="โปรดระบุอาการป่วยโดยละเอียด..." >
+	</textarea>
+
+	<h4>8. ในช่วง 3 เดือนที่ผ่านมา เคยได้รับวัคซีนหรือไม่</h4>
+	<input type="radio" name="vac" value="vac1">เคย
+	<input type="radio" name="vac" value="vac2">ไม่เคย
+
+	<h4>9. เวลาเริ่มเข้าเรียนและสิ้นสุดการเรียน</h4>
+	<label>เริ่ม :   
+		<input type="time" id="start" name="start">
+	</label>
+	<label>สิ้นสุด :
+		<input type="time" id="end" name="end">
+	</label>
+
+	<h4>10. วันเวลาที่ต้องไปพบแพทย์</h4>
+	<label>วันที่ :   
+		<input type="date" id="datetodr" name="datetodr">
+	</label>
+	<label>เวลา:
+		<input type="time" id="timetodr" name="timetodr">
+	</label>
+
+	<h1>ข้อ 1.2 จงใช้ Pattern Attibute เพื่อตรวจสอบรูปแบบของข้อมูลต่อไปนี้</h1>
+
+	<h4>11. รหัสผ่าน 5 อักขระเป็นต้นไป และต้องประกอบด้วยอักขระตัวใหญ่ ตัวเล็กและตัวเลข อย่างน้อยชนิดละ 1 อักขระ</h4>
+	<input 
+			type="text" 
+	        name="pwd"
+			placeholder=""
+			pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z0-9]{5,}"
+	>	
+	<h4>12. "บ้านเลขที่" เช่น 235/4, 69</h4>
+	<input 
+			type="text" 
+	        name="home"
+			placeholder=""
+			pattern="(\d{1,}/\d{1,}|\d{1,})"
+	>
+	<h4>13. "รหัสสินค้า 3 ตัวแรกเป็นอักขระตัวใหญ่ตามด้วยตัวเลข 2 ตัวเท่านั้น" เช่น AAA89</h4>
+	<input 
+			type="text" 
+	        name="code"
+			placeholder=""
+			pattern="[A-Z]{3}[0-9]{2}"
+	>
+	<h4>14. กรอกชื่อ นามสกุล ด้วยภาษาไทยเท่านั้น</h4>
+	<input 
+			type="text" 
+	        name="name"
+			placeholder=""
+			pattern="[\u0E00-\u0E7F]+ [\u0E00-\u0E7F]+"
+	>
+
+	<p>
+</form>
+</body>
+</html>

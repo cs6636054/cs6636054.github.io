@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Form Exersise</title>
+    <link rel="stylesheet" href="style/coverLab3no3.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>เข้าสู่ระบบ</h1>
+        <form id="loginForm" action="LogoutPage.html" method="get">
+            <table>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" id="username" name="username" required autofocus></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="text" id="password" name="password" required></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="5"> 
+                        <div class="pim">กรุณาพิมพ์ตามตัวเลขที่ปรากฎ:</div>
+                        <div class="num">1559</div>
+                        <input type="text" id="number" name="number" pattern="1559" required>
+                    </td>
+                </tr>
+            </table><br>
+            
+            <button type="submit" class="Login-button" >
+                <img src="style/IconLogin.webp" alt="Login">
+            </button>
+        </form>
+    </div>
+</body>
+</html>
